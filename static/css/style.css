@@ -1,6 +1,5 @@
 header {
-    background-color: yellow;
-    vertical-align: middle;
+        vertical-align: middle;
 }
 
 .nopadding {
@@ -30,6 +29,7 @@ main {
     min-height: 93.7em;
 }
 
+
 aside {
     background-color: grey;
 }
@@ -39,7 +39,7 @@ aside img {
 }
 
 
-footer {
+.footer {
     background-color: orange;
     min-height: 8em;
     display: flex;
