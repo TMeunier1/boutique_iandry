@@ -97,12 +97,11 @@ footer p {
     margin: 0 auto;
     width: 400px;
     padding: 1em;
-    border: 1px solid #CCC;
     border-radius: 1em;
 }
 
 .formulaire {
-    padding-left: 20%;
+    padding-left: 2em;;
     padding-top: 10em;
 }
 
@@ -111,10 +110,18 @@ footer p {
 }
 
 #form textarea {
-    width: 40em;
+    width: 30em;
     height: 50em;
     border-radius: 0.5em;
+    padding-left: 30em;
 }
-#nom {
+.catalogue{
+    background-color: link;
+    border-radius: 2px;
+
+}
+.catalogue section #nouvauté {
+    background-color: white;
+    border-radius: 2px;
 
 }
