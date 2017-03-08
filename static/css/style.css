@@ -86,7 +86,6 @@ footer p {
     align-self: center;
 }
 
-
 .ficheproduit span {
     background-color: white;
     border-radius: 2px;
@@ -107,6 +106,7 @@ footer p {
     border-radius: 1em;
 }
 
+
 .panier section {
     border: 1px solid grey;
     padding: 5em;
@@ -123,4 +123,17 @@ footer p {
 .panier button {
     padding: 3em 10em;
     background-color: green;
+}
+
+.formulaire {
+    padding-left: 20%;
+    padding-top: 10em;
+}
+
+#form input{
+    width: 25em;
+}
+
+#form textarea {
+    border-radius: 0.5em;
 }
