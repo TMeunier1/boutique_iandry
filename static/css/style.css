@@ -81,11 +81,23 @@ aside img {
 footer p {
     align-self: center;
 }
-#form {
-
-    margin: 0 auto;
-    width: 400px;
-    padding: 1em;
+.formulaire #form {
+    
     border: 1px solid #CCC;
     border-radius: 1em;
+}
+.formulaire {
+    padding-left: 20%;
+    padding-top: 10em;
+}
+#form input{
+    width: 25em;
+}
+#form textarea {
+    width: 40em;
+    height: 50em;
+    border-radius: 0.5em;
+}
+#nom {
+
 }
