@@ -38,26 +38,26 @@ main {
     min-height: 90.5em;
 }
 
-main section {
+.homepage section {
     text-align: center;
     padding: 1em;
     margin: 3em;
     border-radius: 5px;
 }
 
-main #about {
+.homepage #about {
     background-color: #43dbb2;
     color: white;
     border-radius: 5px;
 }
 
-#propagande {
+.homepage #propagande {
     border: 1px solid grey;
     margin: auto 3em;
     background-color: white;
 }
 
-main section p {
+.homepage section p {
     margin-bottom: 6em;
 }
 
@@ -81,7 +81,19 @@ aside img {
 footer p {
     align-self: center;
 }
-#form {
+
+
+.ficheproduit span {
+    background-color: white;
+    border-radius: 2px;
+    color: red;
+}
+
+.ficheproduit #stock {
+    color: green;
+}
+
+.formulaire #form {
 
     margin: 0 auto;
     width: 400px;
