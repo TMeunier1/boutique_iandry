@@ -1,0 +1,22 @@
+{
+  "name": "Boutique",
+  "authors": [
+    "Tibau <xiliar1888@hotmail.fr>"
+  ],
+  "description": "Boutique en ligne",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/external/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}
