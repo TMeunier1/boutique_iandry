@@ -19,6 +19,10 @@ header {
     text-align: center;
 }
 
+.margin-top {
+    margin-top: 1em;
+}
+
 nav {
     margin-top: 3em;
 }
@@ -86,6 +90,7 @@ footer p {
     background-color: white;
     border-radius: 2px;
     color: red;
+    padding: 1.5em;
 }
 
 .ficheproduit #stock {
@@ -100,6 +105,25 @@ footer p {
     border-radius: 1em;
 }
 
+
+.panier section {
+    border: 1px solid grey;
+    padding: 5em;
+}
+
+.panier span {
+    text-align: center;
+    display: inline-block;
+    background: white;
+    color: red;
+    padding: 1.5em;
+}
+
+.panier button {
+    padding: 3em 10em;
+    background-color: green;
+}
+
 .formulaire {
     padding-left: 2em;;
     padding-top: 10em;
@@ -110,18 +134,23 @@ footer p {
 }
 
 #form textarea {
-    width: 30em;
-    height: 50em;
     border-radius: 0.5em;
     padding-left: 30em;
 }
-.catalogue{
-    background-color: link;
-    border-radius: 2px;
 
+.catalogue{
+    border-radius: 2px;
 }
 .catalogue section #nouvauté {
     background-color: white;
     border-radius: 2px;
 
 }
+ .catalogue section {
+    text-align: center;
+    margin-top: 10em;
+ }
+ .catalogue button{
+    text-align: center;
+    width: 5em;
+ }
