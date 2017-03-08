@@ -19,6 +19,10 @@ header {
     text-align: center;
 }
 
+.margin-top {
+    margin-top: 1em;
+}
+
 nav {
     margin-top: 3em;
 }
@@ -87,6 +91,7 @@ footer p {
     background-color: white;
     border-radius: 2px;
     color: red;
+    padding: 1.5em;
 }
 
 .ficheproduit #stock {
@@ -100,4 +105,22 @@ footer p {
     padding: 1em;
     border: 1px solid #CCC;
     border-radius: 1em;
+}
+
+.panier section {
+    border: 1px solid grey;
+    padding: 5em;
+}
+
+.panier span {
+    text-align: center;
+    display: inline-block;
+    background: white;
+    color: red;
+    padding: 1.5em;
+}
+
+.panier button {
+    padding: 3em 10em;
+    background-color: green;
 }
