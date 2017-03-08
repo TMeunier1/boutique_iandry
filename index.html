@@ -10,50 +10,55 @@
 
 <body>
     <header>
-        <img src="static/images/food-q-c-100-100-9.jpg" alt="LOGO">
-        <nav>
-            <ul>
-                <li>Accueil</li>
-                <li>Catalogue</li>
-                <li>Contactez nous</li>
-                <li>Panier</li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2">
+                    <img src="static/images/food-q-c-100-100-9.jpg" alt="LOGO">
+                </div>
+                <div class="col-xs-10">
+                    <nav class="navbar navbar-default">
+                        <ul class="nomargin">
+                            <li class="navbar-btn"><a href="#">Accueil</a></li>
+                            <li class="navbar-btn"><a href="#">Catalogue</a></li>
+                            <li class="navbar-btn"><a href="#">Contactez nous</a></li>
+                            <li class="navbar-btn"><a href="#">Panier</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
     </header>
     <div class="container">
         <div class="row">
-
-            <main>
-                <div class="container">
+            <div class="col-xs-12 col-md-10 nopadding">
+                <main>
                     <div class="row">
-                        <section>
-                            <h1>A propos de nous</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </section>
+                        <div class="col-xs-12">
+                            <section>
+                                <h1>A propos de nous</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                    laborum.
+                                </p>
+                            </section>
+                        </div>
                     </div>
-                    <!--1 row-->
                     <div class="row">
                         <div class="col-xs-12 col-md-4">
-
-
-                            <article class="">
+                            <article class="col-xs-12">
                                 <img src="static/images/200.jpeg" alt="">
                                 <h1>Top article</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
                             </article>
                         </div>
-                        <!-- 1 article-->
                         <div class="col-xs-12 col-md-4">
-                            <article class="">
+                            <article class="col-xs-12">
                                 <img src="static/images/202.jpeg" alt="">
                                 <h1>Top article</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
                             </article>
                         </div>
-                        <!--2 article-->
                         <div class="col-xs-12 col-md-4">
-                            <article class="">
+                            <article class="col-xs-12">
                                 <img src="static/images/203.jpeg" alt="">
                                 <h1>Top article</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
@@ -62,51 +67,51 @@
                         <!--3 article-->
                     </div>
                     <!-- 2 row-->
-                </div>
-                <!--main container-->
-            </main>
+                </main>
 
-
-
-            <aside class="">
-                <section>
-                    <form class="" action="index.html" method="post">
-                        <fieldset>
-                            <legend>Se connecter</legend>
-                            <label for="">Nom d'utilisateur</label>
-                            <input type="text" name="" value="">
-                            <label for="">Mot de passe</label>
-                            <input type="text" name="" value="">
-                            <input type="checkbox" name="" value="">
-                            <label for="">Se souvenir de moi</label>
-                            <button type="button" name="button">Connexion</button>
-                            <a href="#">Creer un compte</a>
-                        </fieldset>
-                    </form>
-                </section>
-                <section>
-                    <article class="">
-                        <img src="static/images/204.jpeg" alt="">
-                        <h1>Publicité</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    </article>
-                    <article class="">
-                        <img src="static/images/205.jpeg" alt="">
-                        <h1>Publicité</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    </article>
-                    <article class="">
-                        <img src="static/images/206.jpeg" alt="">
-                        <h1>Publicité</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    </article>
-                </section>
-            </aside>
-
+            </div>
+            <!-- div col main-->
+            <div class="col-xs-12 col-md-2 nopadding">
+                <aside class="">
+                    <section>
+                        <form class="" action="index.html" method="post">
+                            <fieldset>
+                                <legend>Se connecter</legend>
+                                <label for="">Nom d'utilisateur</label>
+                                <input type="text" name="" value="">
+                                <label for="">Mot de passe</label>
+                                <input type="text" name="" value="">
+                                <input type="checkbox" name="" value="">
+                                <label for="">Se souvenir de moi</label>
+                                <button type="button" name="button">Connexion</button>
+                                <a href="#">Creer un compte</a>
+                            </fieldset>
+                        </form>
+                    </section>
+                    <section>
+                        <div class="row">
+                            <article class="col-xs-12">
+                                <img src="static/images/204.jpeg" alt="">
+                                <h1>Publicité</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </article>
+                            <article class="col-xs-12">
+                                <img src="static/images/205.jpeg" alt="">
+                                <h1>Publicité</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </article>
+                            <article class="col-xs-12">
+                                <img src="static/images/206.jpeg" alt="">
+                                <h1>Publicité</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </article>
+                        </div>
+                    </section>
+                </aside>
+            </div>
         </div>
-        <!--row 1 container-->
     </div>
-    <!-- container pour main+aside-->
+
 
 
 
