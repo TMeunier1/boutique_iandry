@@ -1,3 +1,4 @@
 $(document).ready(function() {
-    console.log("plop");
+    var main = $("main");
+    var element = $("<")
 });
