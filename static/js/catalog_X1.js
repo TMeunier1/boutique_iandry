@@ -7,5 +7,5 @@ var product0 = {
     thumb : "http://placehold.it/140x140",
     pictures : ["http://placehold.it/400x400", "http://placehold.it/400x400", "http://placehold.it/400x400", "http://placehold.it/400x400"],
 }
-    
+
 var catalog = [product0 ,]
