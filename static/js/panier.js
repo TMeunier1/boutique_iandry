@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+    var GET_PARAM = function(name) {
+        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+    };
+    var index = GET_PARAM("index")
     var panier_json = sessionStorage.getItem("panier");
     var panier = JSON.parse(panier_json);
 
