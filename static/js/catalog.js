@@ -34,11 +34,5 @@ $(document).ready(function() {
         quantite.appendTo(section);
         quantite.html("Quantité : " + catalog[i].quantity);
     }
-
-    for (var i = 0; i < catalog.length / 10; i++) {
-        var nbrPages = $("<li>");
-        pages.append(nbrPages);
-        var lienPages = $("<a class='lienPages'>").html(i+1).attr("href", "#");
-        lienPages.appendTo(nbrPages);
-    }
+    $("#divrow").paginate({ 'perPage': 6 });
 });
