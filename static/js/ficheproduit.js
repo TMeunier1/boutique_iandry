@@ -2,8 +2,9 @@ $(document).ready(function() {
     var GET_PARAM = function(name) {
         return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
     };
+
     var index = GET_PARAM("index")
-    console.log(catalog[index]);
+
     var main = $(".ficheproduit");
     var divRow = $("<div class='row'>");
     var divColUn = $("<div class='col-xs-6'>");
@@ -41,5 +42,11 @@ $(document).ready(function() {
     buttonMoins.appendTo(sectionPanier);
     buttonMoins.html("-");
 
-
+    var panier = {}
+    
+    buttonPanier.click(function() {
+        panier[index] = 1;
+        var panier_json = JSON.stringify(panier);
+        sessionStorage.setItem('panier', panier_json);
+    })
 });

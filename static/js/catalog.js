@@ -11,7 +11,7 @@ $(document).ready(function() {
         var col = $("<div class='col-xs-4'></div>");
         divRow.append(col);
 
-        var section = $("<section class='mainsection'></section>");
+        var section = $("<a class='mainsection'></a>");
         col.append(section);
 
         var titre = $("<h2></h2>")
@@ -35,7 +35,7 @@ $(document).ready(function() {
         quantite.html("Quantité : " + catalog[i].quantity);
     }
 
-    for (var i = 0; i < catalog.length / 5; i++) {
+    for (var i = 0; i < catalog.length / 10; i++) {
         var nbrPages = $("<li>");
         pages.append(nbrPages);
         var lienPages = $("<a class='lienPages'>").html(i+1).attr("href", "#");
