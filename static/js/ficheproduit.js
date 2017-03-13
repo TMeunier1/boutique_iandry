@@ -42,11 +42,25 @@ $(document).ready(function() {
     buttonMoins.appendTo(sectionPanier);
     buttonMoins.html("-");
 
-    var panier = {}
-    
+
     buttonPanier.click(function() {
-        panier[index] = 1;
+        var panier = {}
+        // panier[index] = 0;
+        panier = sessionStorage.getItem("panier");
+        if (panier == null) {
+            panier = {};
+            panier[index] = 0;
+        }
+        else {
+            panier = JSON.parse(panier);
+        }
+        if (panier[index]) {
+            panier[index] = panier[index] + 1;
+        }
+        else {
+            panier[index] = 1;
+        }
         var panier_json = JSON.stringify(panier);
-        sessionStorage.setItem('panier', panier_json);
+        sessionStorage.setItem("panier", panier_json);
     })
 });
