@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var panier = JSON.parse(sessionStorage.getItem("panier"));
+    var panier = JSON.parse(localStorage.getItem("panier"));
     for (var index in panier){
         var produit = catalog[index]
         var quantite = panier[index];
@@ -13,6 +13,7 @@ $(document).ready(function() {
         var titre = $("<h2></h2>");
         var description = $("<p></p>");
         var sectionPrix = $("<section></section>");
+        var spanQuantite = $("<span></span>");
         var spanPrix = $("<span></span>");
         var spanTVA = $("<span></span>");
         var spanTotal = $("<span></span>");
@@ -28,11 +29,9 @@ $(document).ready(function() {
         description.html(catalog[index].description);
         sectionPrix.appendTo(main);
         spanPrix.appendTo(sectionPrix);
-        spanPrix.html(catalog[index].price);
+        spanPrix.html("Prix : " + catalog[index].price + "€");
         spanTVA.appendTo(sectionPrix);
-        spanTVA.html("10%");
-        // spanTotal.appendTo(sectionPrix);
-        // spanTotal.html(catalog[index].price.val() + spanTVA );
+        spanTVA.html("TVA : 10%");
     }
 
 

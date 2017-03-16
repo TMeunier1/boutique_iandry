@@ -19,6 +19,7 @@ $(document).ready(function() {
     var buttonPanier = $("<button id='Ajouter au panier'>");
     var buttonPlus = $("<button id='plus'>");
     var buttonMoins = $("<button id='moins'>");
+    var inputQuantite = $("<input id='quantite'></input>")
 
     divRow.appendTo(main);
     divColUn.appendTo(divRow);
@@ -41,26 +42,42 @@ $(document).ready(function() {
     buttonPlus.html("+");
     buttonMoins.appendTo(sectionPanier);
     buttonMoins.html("-");
+    inputQuantite.appendTo(sectionPanier);
+    inputQuantite.css("width", "4em");
 
+    var clickPlus = 0;
+
+    buttonPlus.click(function() {
+        clickPlus = clickPlus + 1;
+        inputQuantite.val(clickPlus);
+    });
+
+    buttonMoins.click(function() {
+        clickPlus = clickPlus - 1;
+        inputQuantite.val(clickPlus);
+        if (clickPlus < 0) {
+            clickPlus = 0;
+            inputQuantite.val(0);
+        }
+    })
 
     buttonPanier.click(function() {
-        var panier = {}
-        // panier[index] = 0;
-        panier = sessionStorage.getItem("panier");
+        var panier = {};
+        panier = localStorage.getItem("panier");
         if (panier == null) {
             panier = {};
-            panier[index] = 0;
-        }
-        else {
+            panier[index] = inputQuantite.val();
+        } else {
             panier = JSON.parse(panier);
         }
         if (panier[index]) {
-            panier[index] = panier[index] + 1;
+            panier[index] = inputQuantite.val();
         }
         else {
-            panier[index] = 1;
+            panier[index] = inputQuantite.val();
         }
+
         var panier_json = JSON.stringify(panier);
-        sessionStorage.setItem("panier", panier_json);
+        localStorage.setItem("panier", panier_json);
     })
 });
