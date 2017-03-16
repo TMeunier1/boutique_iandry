@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+    var GET_PARAM = function(name) {
+        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+    };
+
     var main = $("main");
     var divRow = $("#divrow");
     var navigation = $("<nav aria-label='Page navigation'></nav>");
@@ -13,6 +17,7 @@ $(document).ready(function() {
 
         var section = $("<a class='mainsection'></a>");
         col.append(section);
+        section.attr("href", "ficheproduit.html" + "?index=" + i);
 
         var titre = $("<h2></h2>")
         section.append(titre);
