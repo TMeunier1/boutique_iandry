@@ -121,7 +121,10 @@ footer p {
     padding: 1.5em;
 }
 
-
+.panier button {
+    padding: 3em 10em;
+    background-color: green;
+}
 
 .formulaire {
     padding-left: 20%;

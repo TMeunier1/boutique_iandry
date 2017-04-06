@@ -1,39 +1,49 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-<head>
-    <meta charset="utf-8">
-    <title>Boutique en ligne</title>
-    <link rel="stylesheet" href="static/external/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
+require_once 'header.php';
 
-<body>
-    <div class="container">
-        <div class="row nomargin nopadding">
-            <div class="col-xs-12 nomargin nopadding">
-            <header>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-2 nopadding nomargin">
-                            <img src="static/images/food-q-c-100-100-9.jpg" alt="LOGO">
-                        </div>
-                        <div class="col-xs-10">
-                            <nav class="navbar navbar-default">
-                                <ul class="nomargin">
-                                    <li class="navbar-btn"><a href="index.html">Accueil</a></li>
-                                    <li class="navbar-btn"><a href="indexcatlg.html">Catalogue</a></li>
-                                    <li class="navbar-btn"><a href="indexform.html">Contactez nous</a></li>
-                                    <li class="navbar-btn"><a href="panier.html">Panier</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </header>
+ $sql = 'SELECT * FROM produit';
+ $res = $mysql->query($sql);
+ ?>
+ <!-- voir header.php -->
+ <!-- j'ai enlevé tout les codes de la partie superieure de chaque page jusqu'à la balise fermante "/header".On le remplace par ce code php "require_once".On le refait pour tout les éléments identiques , exemple le header , footer ou des aside de nav aussi.Par contre , On garde les codes spécifiques de chaque élémént
+     de chaque page ex :$id = $_GET["X"];
+     $sql = "SELECT * FROM produit WHERE id_produit = $id";
+     $res = $mysql->query($sql);
+     $row = $res->fetch_array();
+ dans la page "produit.php". -->
             <div class="row">
                 <div class="col-xs-12 col-md-10 nopadding">
-                    <main class="ficheproduit">
+                    <main class="catalogue">
+                        <div class="row" id="divrow">
+                            <?php
+
+                            while (NULL !== ($row = $res->fetch_array())) {?>
+
+                             <div class="col-xs-4">
+                                 <a href="produit.php?X=<?php echo $row["id_produit"]?>" class="mainsection">
+                                    <!-- 1- je cree un lien vers la page ficheproduit.php
+                                    2- j'affiche l'identité du produit dans la BDD. Ici -->
+                                     <h2><?php echo $row["name_produit"]?></h2>
+                                     <!-- j'affiche le nom du produit que je recupere dans la BDD en H2  -->
+                                     <img src = "<?php echo "static/images".$row["image"] ?>">
+                                     <!-- j'affiche la photo du produit que je recupere dans la BDD ici la photo  n'existe pas encore  -->
+                                     <p><?php echo $row["description_produit"]?></p><br/>
+                                     <!-- j'affiche la description du produit que je recupere dans la BDD en p  -->
+                                     <p><?php echo $row["prix_produit"]?></p>
+                                     <!-- j'affiche le prix du produit que je recupere dans la BDD en p  -->
+
+                                 </a>
+
+                             </div>
+                             <?php
+                         }
+
+                         $mysql->close();
+
+                         ?>
+
+                        </div>
                     </main>
                 </div>
 
@@ -76,15 +86,24 @@
                     </aside>
                 </div>
             </div>
-            <footer class="col-xs-12 footer">
+            <?php
+
+            require_once 'footer.php';
+
+            ?>
+            <!-- <footer class="col-xs-12 footer">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </footer>
+             j'ai supprimer le footer car j'utilise le '<?php require_once 'footer.php';?>' .Comme on fait pour chaque header de chaque page . -->
         </div>
+
     </div>
     <script src="static/external/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="static/external/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="static/js/catalog_x100.js" charset="utf-8"></script>
-    <script src="static/js/ficheproduit.js" charset="utf-8"></script>
+    <script src="static/external/simplePagination.js/jquery.simplePagination.js" charset="utf-8"></script>
+    <script src="static/external/paginate/src/jquery.paginate.js" charset="utf-8"></script>
+
 
 </body>
+
 </html>

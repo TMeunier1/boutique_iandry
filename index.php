@@ -1,38 +1,24 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-<head>
-    <meta charset="utf-8">
-    <title>Boutique en ligne</title>
-    <link rel="stylesheet" href="static/external/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
+require_once 'header.php';
+$sql = "SELECT * FROM produit ";
+$res =  $mysql->query($sql);
 
-<body>
-    <div class="container">
-        <div class="row nomargin nopadding">
-            <div class="col-xs-12 nomargin nopadding">
+while (($row = $res->fetch_array())!==NULL){
 
-            </div>
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-2 nopadding nomargin">
-                    <img src="static/images/food-q-c-100-100-9.jpg" alt="LOGO">
-                </div>
-                <div class="col-xs-10">
-                    <nav class="navbar navbar-default">
-                            <ul class="nomargin">
-                                <li class="navbar-btn"><a href="index.html">Accueil</a></li>
-                                <li class="navbar-btn"><a href="indexcatlg.html">Catalogue</a></li>
-                                <li class="navbar-btn"><a href="indexform.html">Contactez nous</a></li>
-                                <li class="navbar-btn"><a href="panier.html">Panier</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+    $PRODUITS[] = $row;
+    // on stock tout le produit de la ligne dans un variable tableau , ici on les apl PRODUIT
+
+}
+// var_dump(count($PRODUIT));
+// pour afficher les infos de la variabels le nbr c var_dump+count c pr compter le nbr des elements dans le tblx
+$nbPt = count($PRODUITS);
+
+?>
+
+
+
+
         <div class="row">
             <div class="col-xs-12 col-md-10 nopadding">
                 <main class="homepage">
@@ -53,6 +39,29 @@
                         </div>
                     </div>
                     <section id="propagande">
+
+
+                        <div class="row nomargin">
+                            <div class="col-xs-12 textaligncenter nopadding">
+
+                        <?php for ($i = 0; $i < 3 ; $i++) {
+
+                            $nbaleat = random_int(0, $nbPt-1);
+                                $produit = $PRODUITS[$nbaleat];
+                                // var_dump($produit);
+                                echo '<a class="col-xs-4 nopadding" style="color: black;" href="produit.php?X='.$produit['id_produit'].'"><img src="http://placehold.it/140x140">';
+                                echo "<h1>".$produit['name_produit']."</h1>";
+                                echo "<p>".$produit['description_produit']."</p>";
+                                echo "<p>".$produit['prix_produit']."</p>";
+                                echo "</a>";
+                        }
+
+                         ?>
+
+                            </div>
+                        </div>
+
+
 
                     </section>
                 </main>
@@ -97,15 +106,20 @@
                     </aside>
                 </div>
                 </div>
-                <footer class="col-xs-12 footer">
+                <?php
+
+                require_once 'footer.php';
+
+                ?>
+                <!-- <footer class="col-xs-12 footer">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </footer>
+                </footer> -->
             </div>
 
         </div>
         <script src="static/external/jquery/dist/jquery.min.js" charset="utf-8"></script>
         <script src="static/external/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
-        <script src="static/js/homepage.js" charset="utf-8"></script>
+        <script src="static/js/catalog_x100.js" charset="utf-8"></script>
 
 </body>
 

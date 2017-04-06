@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 
@@ -35,33 +37,7 @@
             </header>
             <div class="row">
                 <div class="col-xs-12 col-md-10 nopadding">
-                    <main class="formulaire">
-                        <form id="form">
-
-                            <label for="nom">Nom :</label>
-                            <input type="text" id="nom" />
-
-
-                            <label for="nom">Prénom :</label>
-                            <input type="text" id="nom" />
-
-
-                            <label for="nom">Adresse :</label>
-                            <input type="text" id="nom" />
-
-
-                            <label for="courriel">Email :</label>
-                            <input type="email" id="Email" />
-
-
-                            <label for="message">Message :</label>
-                            <textarea rows="8" cols="40"></textarea>
-
-
-                            <div class="button">
-                                <button type="submit">Envoyer votre message</button>
-                            </div>
-                        </form>
+                    <main class="panier">
 
                     </main>
                 </div>
@@ -69,7 +45,7 @@
                 <div class="col-xs-12 col-md-2 nopadding">
                     <aside class="">
                         <section>
-                            <form="" action="index.html" method="post">
+                            <form class="" action="index.html" method="post">
                                 <fieldset>
                                     <legend>Se connecter</legend>
                                     <label for="">Nom d'utilisateur</label>
@@ -81,7 +57,7 @@
                                     <button type="button" name="button">Connexion</button>
                                     <a href="#">Creer un compte</a>
                                 </fieldset>
-                                </form>
+                            </form>
                         </section>
                         <section>
                             <div class="row">
@@ -109,11 +85,11 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </footer>
         </div>
-
     </div>
     <script src="static/external/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="static/external/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="static/js/script.js" charset="utf-8"></script>
+    <script src="static/js/catalog_x100.js" charset="utf-8"></script>
+    <script src="static/js/panier.js" charset="utf-8"></script>
 
 </body>
 

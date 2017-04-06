@@ -1,46 +1,34 @@
+<?php
 
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="utf-8">
-    <title>Boutique en ligne</title>
-    <link rel="stylesheet" href="static/external/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/external/simplePagination.js/simplePagination.css">
-</head>
+require_once 'header.php';
 
-<body>
-    <div class="container">
-        <div class="row nomargin nopadding">
-            <div class="col-xs-12 nomargin nopadding">
 
-            </div>
-            <header>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-2 nopadding nomargin">
-                            <img src="static/images/food-q-c-100-100-9.jpg" alt="LOGO">
-                        </div>
-                        <div class="col-xs-10">
-                            <nav class="navbar navbar-default">
-                                <ul class="nomargin">
-                                    <li class="navbar-btn"><a href="index.html">Accueil</a></li>
-                                    <li class="navbar-btn"><a href="indexcatlg.html">Catalogue</a></li>
-                                    <li class="navbar-btn"><a href="indexform.html">Contactez nous</a></li>
-                                    <li class="navbar-btn"><a href="panier.html">Panier</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </header>
+
+$id = $_GET["X"];
+
+
+$sql = "SELECT * FROM produit WHERE id_produit = $id";
+$res = $mysql->query($sql);
+$row = $res->fetch_array();
+
+?>
+
+
             <div class="row">
                 <div class="col-xs-12 col-md-10 nopadding">
-                    <main class="catalogue">
-                        <div class="row" id="divrow">
+                    <main class="ficheproduit">
 
-                        </div>
+                         <div class="col-xs-4">
+                             <a class="mainsection">
+                                 <h2><?php echo $row["name_produit"]?></h2>
+                                 <img src="http://placehold.it/140x140">
+                                 <p><?php echo $row["description_produit"]?></p><br/>
+                                 <p><?php echo $row["prix_produit"]?></p>
+                             </a>
+                         </div>
+
+
                     </main>
                 </div>
 
@@ -83,19 +71,21 @@
                     </aside>
                 </div>
             </div>
-            <footer class="col-xs-12 footer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </footer>
-        </div>
+            <?php
 
+            require_once 'footer.php';
+
+            ?>
+
+            <!-- <footer class="col-xs-12 footer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </footer> -->
+        </div>
     </div>
     <script src="static/external/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="static/external/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="static/external/simplePagination.js/jquery.simplePagination.js" charset="utf-8"></script>
     <script src="static/js/catalog_x100.js" charset="utf-8"></script>
-    <script src="static/external/paginate/src/jquery.paginate.js" charset="utf-8"></script>
-    <script src="static/js/catalog.js" charset="utf-8"></script>
+    <script src="static/js/ficheproduit.js" charset="utf-8"></script>
 
 </body>
-
 </html>
